@@ -7,4 +7,4 @@ build:
 run:                              
   command: node app.js
   network:
-    port: 8000
+    port: 3002
