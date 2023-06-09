@@ -18,4 +18,4 @@ setTimeout(function() {
    server.listen(3002);
    console.log('Server awake');
    console.log('Server is now listening');
-}, 300000);
+}, 100000);
