@@ -22,10 +22,10 @@ function sleep(ms) {
 }
 
 var start = Date.now();
-var end = start + 100000; // 3 minutes
+var end = start + 80000; // 3 minutes
 for (var i = 0; ; i++) {
   console.log(Date.now() + " " + i + " "+ factorial(i));
-  sleep(5000)
+  sleep(2000)
   if (Date.now() > end) {
     break;
   }
