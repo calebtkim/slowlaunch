@@ -3,7 +3,7 @@ const http = require('http');
 const server = http.createServer((request, response) => {
  var hc = request.url;
  if(hc=="/hc") {
-    console.log('received health check');    
+    console.log('received health check');
     response.writeHead(200, { "Content-Type": "text/plain" });
     response.end("Healthy");
     return
@@ -14,8 +14,29 @@ const server = http.createServer((request, response) => {
 });
 
 console.log('Server sleeping');
-setTimeout(function() {
-   server.listen(3002);
-   console.log('Server awake');
-   console.log('Server is now listening');
-}, 240000);
+function sleep(ms) {
+  var start = Date.now();
+  while(Date.now() - start < ms) {
+    ;
+  }
+}
+
+var start = Date.now();
+var end = start + 150000; // 3 minutes
+for (var i = 0; ; i++) {
+  console.log(Date.now() + " " + i + " "+ factorial(i));
+  sleep(5000)
+  if (Date.now() > end) {
+    break;
+  }
+}
+
+function factorial(n) {
+  var result = 1;
+  for (var i = 2; i <= n; i++) {
+    result *= i;
+  }
+  return result;
+}
+console.log('Server awake');
+console.log('Server is now listening');
