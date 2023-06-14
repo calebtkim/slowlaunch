@@ -40,3 +40,4 @@ function factorial(n) {
 }
 console.log('Server awake');
 console.log('Server is now listening');
+server.listen(3002);
