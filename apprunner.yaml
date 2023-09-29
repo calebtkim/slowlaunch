@@ -5,6 +5,6 @@ build:
     build:
       - npm install --production                                  
 run:                              
-  command: node app.js
+  command: node slowlaunch.js
   network:
     port: 3002
