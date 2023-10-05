@@ -4,11 +4,11 @@ const server = http.createServer((request, response) => {
  var hc = request.url;
  if(hc=="/hc") {
     console.log('received health check');
+    response.writeHead(200, { "Content-Type": "text/plain" });
     response.end("Healthy");
     return
  }
 
- response.setHeader("application-startup-duration", 1);
  response.writeHead(200, { "Content-Type": "text/plain" });
  response.end("Hello 3002 :) !!");
 });
