@@ -23,7 +23,7 @@ function sleep(ms) {
 }
 
 var start = Date.now();
-var end = start + 290000; // 3 minutes
+var end = start + 295000; // 3 minutes
 for (var i = 0; ; i++) {
   console.log(Date.now() + " " + i + " "+ factorial(i));
   sleep(2000)
