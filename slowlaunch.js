@@ -9,7 +9,7 @@ const server = http.createServer((request, response) => {
     return
  }
 
- sleep(115000)
+
  response.writeHead(200, { "Content-Type": "text/plain" });
  response.end("Hello 3002 :) !!");
 });
