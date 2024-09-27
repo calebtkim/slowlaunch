@@ -8,8 +8,11 @@ const server = http.createServer((request, response) => {
     response.end("Healthy");
     return
  }
-
- factorial(10000)
+ 
+ startTime  = new Date().getTime(); 
+ factorial(200000000);
+ endTime = new Date().getTime();
+ console.log(endTime - startTime)
  
  response.writeHead(200, { "Content-Type": "text/plain" });
  response.end("Hello 3002 :) !!");
