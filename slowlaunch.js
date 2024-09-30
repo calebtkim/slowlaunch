@@ -10,12 +10,13 @@ const server = http.createServer((request, response) => {
  }
  
  startTime  = new Date().getTime(); 
- factorial(200000000);
+ factorial(100000000);
  endTime = new Date().getTime();
  console.log(endTime - startTime)
  
  response.writeHead(200, { "Content-Type": "text/plain" });
  response.end("Hello 3002 :) !!");
+ return;
 });
 
 function factorial(n) {
