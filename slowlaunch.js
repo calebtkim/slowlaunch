@@ -10,7 +10,7 @@ const server = http.createServer((request, response) => {
  }
  
  startTime  = new Date().getTime(); 
- factorial(100000000);
+ factorial(1);
  endTime = new Date().getTime();
  console.log(endTime - startTime)
  
